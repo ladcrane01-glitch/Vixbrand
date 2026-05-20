@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="SleepWell – Premium Mattresses, Pillows, Duvets and Bedspreads. Quality bedding delivered across Nigeria."/>
+  <title>SleepWell – Premium Bedding Nigeria</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION
+       ========================================== -->
+  <nav>
+    <a class="logo" href="#">Sleep<span>Well</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#features">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="cart-btn" onclick="toggleCart()">
+        🛒 Cart <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <div class="hero-wrapper">
+    <div class="hero">
+      <div class="hero-text">
+        <span class="hero-tag">Premium Bedding — Made for Rest</span>
+        <h1>Sleep Better,<br>Live Better.</h1>
+        <p>
+          Luxury mattresses, pillows, duvets and bedspreads crafted for the
+          perfect night's sleep. Because rest is not a luxury — it's a necessity.
+        </p>
+        <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+          Shop Collection
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+          Learn More
+        </button>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Bed Illustration -->
+        <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Comfortable bed illustration">
+          <!-- Mattress base -->
+          <rect x="30" y="140" width="200" height="70" rx="4" fill="#E8E2D9"/>
+          <!-- Headboard -->
+          <rect x="20" y="130" width="220" height="20" rx="4" fill="#B5A99A"/>
+          <!-- Pillow left -->
+          <rect x="45" y="105" width="70" height="32" rx="8" fill="#FAF8F5" stroke="#B5A99A" stroke-width="1.5"/>
+          <!-- Pillow right -->
+          <rect x="145" y="105" width="70" height="32" rx="8" fill="#FAF8F5" stroke="#B5A99A" stroke-width="1.5"/>
+          <!-- Duvet fold -->
+          <rect x="30" y="135" width="200" height="10" rx="4" fill="#4A3728" opacity="0.15"/>
+          <path d="M30 145 Q130 138 230 145" stroke="#B5A99A" stroke-width="1" fill="none"/>
+          <!-- Moon -->
+          <path d="M195 55 Q210 60 205 75 Q220 65 215 50 Q205 45 195 55Z" fill="#B5A99A" opacity="0.6"/>
+          <!-- Stars -->
+          <circle cx="60"  cy="50" r="2"   fill="#B5A99A" opacity="0.4"/>
+          <circle cx="90"  cy="35" r="1.5" fill="#B5A99A" opacity="0.5"/>
+          <circle cx="130" cy="45" r="2.5" fill="#B5A99A" opacity="0.3"/>
+          <circle cx="160" cy="30" r="1.5" fill="#B5A99A" opacity="0.45"/>
+          <!-- Bed legs -->
+          <rect x="38"  y="205" width="10" height="20" rx="2" fill="#B5A99A"/>
+          <rect x="212" y="205" width="10" height="20" rx="2" fill="#B5A99A"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       PRODUCTS SECTION
+       ========================================== -->
+  <section id="products">
+    <div class="section-label">Our Collection</div>
+    <div class="section-title">Crafted for Comfort</div>
+    <!-- Products are rendered here by app.js -->
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ==========================================
+       FEATURES / WHY US SECTION
+       ========================================== -->
+  <section id="features">
+    <div class="section-label">Why SleepWell</div>
+    <div class="section-title">Built on Better Rest</div>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🌿</div>
+        <div class="feature-title">Natural Materials</div>
+        <div class="feature-text">100% organic cotton and natural fibres for breathable comfort all night.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-title">Free Delivery</div>
+        <div class="feature-text">Free delivery on all orders across Nigeria. Delivered straight to your door.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-title">30-Night Trial</div>
+        <div class="feature-text">Not satisfied? Return within 30 nights for a full refund, no questions asked.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🏅</div>
+        <div class="feature-title">5-Year Warranty</div>
+        <div class="feature-text">Every product is backed by our 5-year quality guarantee.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ==========================================
+       TESTIMONIALS / REVIEWS SECTION
+       ========================================== -->
+  <section id="reviews">
+    <div class="section-label">Customer Reviews</div>
+    <div class="section-title">What Our Customers Say</div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-text">
+          "Best sleep I've ever had. The mattress is incredibly comfortable and
+          the duvet keeps me at the perfect temperature all night."
+        </div>
+        <div class="testimonial-author">— Amaka O., Lagos</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-text">
+          "The pillows are absolutely divine. Soft yet supportive. My back pain
+          disappeared after the first week of use."
+        </div>
+        <div class="testimonial-author">— Chidi N., Abuja</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-text">
+          "Gorgeous bedspread, premium quality. Delivery was fast and the
+          packaging was beautiful. Highly recommend!"
+        </div>
+        <div class="testimonial-author">— Fatima B., Port Harcourt</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ==========================================
+       CONTACT SECTION
+       ========================================== -->
+  <section id="contact" class="contact-section">
+    <div class="section-label">Get in Touch</div>
+    <div class="section-title">We'd Love to Hear from You</div>
+    <p>Questions about your order or our products? Reach out anytime.</p>
+
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-label">Email</div>
+        <div class="contact-card-value">hello@sleepwell.ng</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">WhatsApp</div>
+        <div class="contact-card-value">+234 800 000 0000</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">Hours</div>
+        <div class="contact-card-value">Mon–Sat, 8am–6pm</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <strong>SleepWell</strong> &nbsp;·&nbsp; Premium Bedding Nigeria &nbsp;·&nbsp; © 2026 All rights reserved.
+  </footer>
+
+  <!-- ==========================================
+       CART SIDEBAR
+       ========================================== -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-btn" onclick="toggleCart()" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">Your cart is empty.<br>Add some products to get started.</div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total">₦0</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Proceed to Checkout →</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TOAST NOTIFICATION
+       ========================================== -->
+  <div class="toast" id="toast"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
