@@ -42,7 +42,7 @@
   <div class="hero-wrapper">
     <div class="hero">
       <div class="hero-text">
-        <span class="hero-tag">Premium Bedding — Made for Rest</span>
+        <span class="hero-tag">Premium Materials — Made for Rest</span>
         <h1>Sleep Better,<br>Live Better.</h1>
         <p>
           Luxury mattresses, pillows, duvets and bedspreads crafted for the
@@ -57,30 +57,7 @@
       </div>
 
       <div class="hero-visual">
-        <!-- Bed Illustration -->
-        <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Comfortable bed illustration">
-          <!-- Mattress base -->
-          <rect x="30" y="140" width="200" height="70" rx="4" fill="#E8E2D9"/>
-          <!-- Headboard -->
-          <rect x="20" y="130" width="220" height="20" rx="4" fill="#B5A99A"/>
-          <!-- Pillow left -->
-          <rect x="45" y="105" width="70" height="32" rx="8" fill="#FAF8F5" stroke="#B5A99A" stroke-width="1.5"/>
-          <!-- Pillow right -->
-          <rect x="145" y="105" width="70" height="32" rx="8" fill="#FAF8F5" stroke="#B5A99A" stroke-width="1.5"/>
-          <!-- Duvet fold -->
-          <rect x="30" y="135" width="200" height="10" rx="4" fill="#4A3728" opacity="0.15"/>
-          <path d="M30 145 Q130 138 230 145" stroke="#B5A99A" stroke-width="1" fill="none"/>
-          <!-- Moon -->
-          <path d="M195 55 Q210 60 205 75 Q220 65 215 50 Q205 45 195 55Z" fill="#B5A99A" opacity="0.6"/>
-          <!-- Stars -->
-          <circle cx="60"  cy="50" r="2"   fill="#B5A99A" opacity="0.4"/>
-          <circle cx="90"  cy="35" r="1.5" fill="#B5A99A" opacity="0.5"/>
-          <circle cx="130" cy="45" r="2.5" fill="#B5A99A" opacity="0.3"/>
-          <circle cx="160" cy="30" r="1.5" fill="#B5A99A" opacity="0.45"/>
-          <!-- Bed legs -->
-          <rect x="38"  y="205" width="10" height="20" rx="2" fill="#B5A99A"/>
-          <rect x="212" y="205" width="10" height="20" rx="2" fill="#B5A99A"/>
-        </svg>
+        <img width="260" src="image/heroimg.png" alt="SleepWell Master bedroom" class="hero-image"/>
       </div>
     </div>
   </div>
@@ -91,7 +68,17 @@
   <section id="products">
     <div class="section-label">Our Collection</div>
     <div class="section-title">Crafted for Comfort</div>
-    <!-- Products are rendered here by app.js -->
+
+    <div class="product-filters" id="product-filters">
+      <button class="filter-btn active" onclick="filterCategory('All')">All</button>
+      <button class="filter-btn" onclick="filterCategory('Mattress')">Mattress</button>
+      <button class="filter-btn" onclick="filterCategory('Pillow')">Pillow</button>
+      <button class="filter-btn" onclick="filterCategory('Duvet')">Duvet</button>
+      <button class="filter-btn" onclick="filterCategory('Bedspread')">Bedspread</button>
+      <button class="filter-btn" onclick="filterCategory('Blanket')">Blanket</button>
+      <button class="filter-btn" onclick="filterCategory('Bedframes')">Bedframes</button>
+    </div>
+
     <div class="product-grid" id="product-grid"></div>
   </section>
 
@@ -115,11 +102,11 @@
         <div class="feature-title">Free Delivery</div>
         <div class="feature-text">Free delivery on all orders across Nigeria. Delivered straight to your door.</div>
       </div>
-      <div class="feature-item">
+      <!-- <div class="feature-item">
         <div class="feature-icon">🔄</div>
         <div class="feature-title">30-Night Trial</div>
         <div class="feature-text">Not satisfied? Return within 30 nights for a full refund, no questions asked.</div>
-      </div>
+      </div> -->
       <div class="feature-item">
         <div class="feature-icon">🏅</div>
         <div class="feature-title">5-Year Warranty</div>
@@ -139,12 +126,12 @@
 
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
+        <div class="stars">★★★★</div>
         <div class="testimonial-text">
           "Best sleep I've ever had. The mattress is incredibly comfortable and
           the duvet keeps me at the perfect temperature all night."
         </div>
-        <div class="testimonial-author">— Amaka O., Lagos</div>
+        <div class="testimonial-author">— Victor F., Osogbo</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
@@ -152,7 +139,7 @@
           "The pillows are absolutely divine. Soft yet supportive. My back pain
           disappeared after the first week of use."
         </div>
-        <div class="testimonial-author">— Chidi N., Abuja</div>
+        <div class="testimonial-author">— Samuel A., Ife</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
@@ -160,7 +147,7 @@
           "Gorgeous bedspread, premium quality. Delivery was fast and the
           packaging was beautiful. Highly recommend!"
         </div>
-        <div class="testimonial-author">— Fatima B., Port Harcourt</div>
+        <div class="testimonial-author">— Alhaji Yisa., Owena</div>
       </div>
     </div>
   </section>
@@ -182,7 +169,7 @@
       </div>
       <div class="contact-card">
         <div class="contact-card-label">WhatsApp</div>
-        <div class="contact-card-value">+234 800 000 0000</div>
+        <div class="contact-card-value">+234 706 905 4966</div>
       </div>
       <div class="contact-card">
         <div class="contact-card-label">Hours</div>
